@@ -1,0 +1,60 @@
+function detecta(){
+if (window.XMLHttpRequest){
+	xmlhttp=new XMLHttpRequest();
+	var pantallax = screen.width;
+	var pantallay = screen.height;
+	var ventanax = window.innerWidth;
+	var ventanay = window.innerHeight;
+	var url = encodeURI(document.URL);
+	var lang = navigator.language;
+	var javaenabled = navigator.javaEnabled();
+	var referer =  encodeURIComponent(document.referrer);
+}else{
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	var pantallax = '';
+	var pantallay = '';
+	var ventanax = '';
+	var ventanay = '';
+	var url = '';
+	var lang = '';
+	var javaenabled = '';
+	var referer = '';
+}
+console.log("referrer: "+webanaliticascliente)
+cadena = "https://jocarsa.com/go/webanaliticas/logger.php?cliente="+webanaliticascliente+"&pantallax="+pantallax+"&pantallay="+pantallay+"&ventanax="+ventanax+"&ventanay="+ventanay+"&url="+url+"&lang="+lang+"&java="+javaenabled+"&referer="+referer
+xmlhttp.open("GET",cadena,true);
+console.log(cadena)
+xmlhttp.send();
+}
+detecta();
+
+	
+var posx,posy;
+window.onmousemove = function(e) { posx = e.pageX;posy = e.pageY;scroll = window.pageYOffset }
+
+//calor();
+
+function calor(){
+
+if (window.XMLHttpRequest){
+	xmlhttp2=new XMLHttpRequest();
+	var ventanax = window.innerWidth;
+	var ventanay = window.innerHeight;
+	var pantallax = screen.width;
+	var pantallay = screen.height;
+	var ventanax = window.innerWidth;
+	var ventanay = window.innerHeight;
+	var url = encodeURI(document.URL);
+	var lang = navigator.language;
+	var javaenabled = navigator.javaEnabled();
+}else{
+	xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP");
+	
+}
+
+
+    xmlhttp2.open("GET","http://www.webanaliticas.com/logger2.php?cliente="+webanaliticascliente+"&pantallax="+pantallax+"&pantallay="+pantallay+"&ventanax="+ventanax+"&ventanay="+ventanay+"&url="+url+"&lang="+lang+"&java="+javaenabled+"&posx="+posx+"&posy="+posy+""+"&scrolltop="+scroll,true);
+xmlhttp2.send();
+var t = setTimeout("calor()",10000);
+}
+		

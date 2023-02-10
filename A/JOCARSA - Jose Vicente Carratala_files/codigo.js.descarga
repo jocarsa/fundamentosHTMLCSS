@@ -1,0 +1,4 @@
+$(document).ready(function(){
+	altura = $(".imagenpost").width();
+	$(".imagenpost").css("height",altura)
+})
