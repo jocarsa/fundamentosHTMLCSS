@@ -1,0 +1,185 @@
+<!-- La etiqueta doctype nos dice que el documento es html5 -->
+<!doctype html>
+<!-- La etiqueta html, se abre y se cierra y contiene código en lenguaje HTML -->
+<html>
+    <!-- La cabeza contiene la información que no va a ver el usuario -->
+    <head>
+        <!-- Pongo el título de la web -->
+        <title>La web de Jose Vicente</title>
+        <!-- activo eñes y acentos -->
+        <meta charset="utf-8">
+        <!-- El estilo indica cómo se van a ver las cosas -->
+        <style>
+            h1{ /* Selecciono el titulo de nivel 1 */
+                color:black; /* Y le pongo color rojo */
+            }
+            h2{ /* Selecciono el titulo de nivel 2 */
+                color:grey; /* Y le pongo el color azul */
+            }
+            img{ /* Selecciono la imagen */
+                width:200px; /* La hago más pequeña */
+            }
+            /* Estilizamos el menu */
+            nav ul{
+                list-style-type:none; /* Quito los puntos de la lista */
+                padding:0px; /* Quito el margen interno de la lista */
+                margin:0px; /* Quito el margen exterior de la lista */
+            }
+            nav ul li{
+                background:black; /* El fondo del botón será negro */
+                color:white; /* El color de la letra será blanco */
+                padding:5px;    /* El boton tiene un margen interno de 5 px */
+                width:100px;    /* El boton tiene una anchura de 100 px */
+                text-align:center;  /* El texto está alieado al centro */
+                border-radius:5px;  /* El boton tiene un borde redondeado */
+                float:left; /* Los botones flotan uno al lado del otro  */
+                margin:1px; /* Hay una separación de 1 pixel entre ellos */
+            }
+            nav ul li a{
+                color:inherit;  /* Le quitamos el color azul a los hipervinculos */
+                text-decoration: none;  /* Le quitamos el subrayado a los hipervinculos */
+            }
+            /* Estilos generales de la web */
+            body{
+                font-family:sans-serif; /* La letra de la web será "de palo" */
+                background:rgb(220,220,220); /* Quiero el fondo de la web de color gris */
+                background:url(fondoweb.jpg); /* Podemos poner una imagen de fondo */
+            }
+            header,main,footer{
+                max-width:800px;
+                width:80%; /* Los bloques principales no ocuparán todo el ancho */
+                margin:auto; /* Pero los quiero centrados */
+                background:white; /* Quiero que el fondo de los bloques sea blanco */
+                padding:50px; /* Quiero un margen interior en los bloques principales */
+            }
+            header img{
+                float:left; /* La imagen estará a la izquierda del texto */
+                margin-right:10px; /* Habrá un margen entre la imagen y los títulos */
+            }
+            article{
+                width:50%; /* Cada articulo ocupa la mitad del espacio en horizontal */
+                float:left; /* Los articulos flotan uno al lado del otro */
+            }
+            header,main,footer,.clearfix{
+                clear:both; /* Evitamos que los elementos desborden */
+            }
+            video{
+                width:100%; /* El video ocupa toda la anchura */
+            }
+            form{
+                width:70%; /* El formulario ocupa el 70% de la anchura */
+                margin:auto; /* Quiero que el formulario este centrado */
+            }
+            form input,form textarea{
+                width:100%; /* Cada uno de los campos del formulario ocupa toda la anchura */
+                padding-top:5px; /* El campo tendra un margen interior superior */
+                padding-bottom:5px; /* El campo tendra un margen interior en la parte de bajo */
+                margin-bottom:10px; /* El campo tendrá un margen exterior de 10 pixeles en la parte de bajo */
+                border:1px solid grey; /* Cada campo del formulario tendrá un borde gris de  un pixel */
+                border-radius:5px; /* Los campos tendrán un redondeo en las esquinas */
+            }
+            article img{
+                width:100%; /* La imagen del artículo tendrá una anchura del 100% */
+            }
+            footer{
+                text-align:center;  /* El texto del pié de página está alineado al centro */
+            }
+            #contacto{
+                padding-top:20px;
+            }
+            article{
+                box-sizing: border-box;
+                padding: 20px;
+            }
+            p{
+                text-align: justify;
+                font-size:12px;
+            }
+            
+        </style>
+    </head>
+    <!-- El cuerpo contiene la información que sí que va a ser el usuario -->
+    <body>
+        <!-- La cabecera es la parte superior de la página -->
+        <header>
+            <!-- La etiqueta IMG nos permite meter imágenes -->
+            <img src="josevicente.jpg" alt="Jose Vicente Carratala">
+            <!-- Los H son los titulares principales --> 
+            <h1>La web de Jose Vicente</h1>
+            <h2>Programador, Diseñador y Formador</h2>
+            
+            <!-- Ahora vamos a crear un menú de navegación -->
+            <nav>
+                <!-- UL quiere decir unordered list -->
+                <ul>
+                    <li>
+                        <a href="#inicio">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#sobremi">Sobre Mi</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+        </header>
+        <!-- Main es la etiqueta principal -->
+        <main>
+            <section name="sobremi" id="sobremi">
+                <h3>Sobre Mi</h3>
+                <p>En este bloque pondréis una descripción acerca de vosotros desde el punto de vista profesional, intentando resaltar vuestros valores y los motivos por los cuales una empresa debería contrataros</p>
+            </section>
+            <!-- La etiqueta video me sirve para introducir video en la web -->
+            <video src="entrevista.mp4" controls="controls"></video>
+            <section name="blog" id="blog">
+                <h3>Blog</h3>
+                <article>
+                    <img src="blog1.jpg" alt="noticia">
+                    <time>2023-01-26</time>
+                    <h4>Título de la noticia sobre vosotros</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+                <article>
+                    <img src="blog2.jpg" alt="noticia">
+                    <time>2023-01-26</time>
+                    <h4>Título de la noticia sobre vosotros</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+                <article>
+                    <img src="blog3.jpg" alt="noticia">
+                    <time>2023-01-26</time>
+                    <h4>Título de la noticia sobre vosotros</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+                <article>
+                    <img src="blog4.jpg" alt="noticia">
+                    <time>2023-01-26</time>
+                    <h4>Título de la noticia sobre vosotros</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </article>
+                <div class="clearfix"></div>
+            </section>
+            
+            <section id="contacto" name="contacto">
+                <h3>Contacto</h3>
+                <form action="enviacorreo.php">
+                    <input type="text" name="nombre" placeholder="Introduce tu nombre">
+                    <input type="email" name="email" placeholder="Introduce tu email">
+                    <textarea name="mensaje"></textarea>
+                    <input type="submit">
+                </form>
+            </section>
+            <div class="clearfix"></div>
+        </main>
+        <!-- Footer es el pié de página -->
+        <footer>
+            <p>(c) 2023 Jose Vicente Carratala</p>
+            <div class="clearfix"></div>
+        </footer>
+    </body>
+</html>
